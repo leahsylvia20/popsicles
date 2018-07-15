@@ -11,8 +11,8 @@
   <body>
     <div class="container">
       <h1>PDX Pops</h1>
-      <h2>Popsicles for adults</h2>
-      <p> It's hot outside, order a pop and we'll have it to your house lickity split.</p>
+      <h2>Popsicles for grown-ups</h2>
+      <p align="center"> It's hot outside, order a pop and we'll have it to your house lickity split.</p>
       <img src=img/pops.jpg alt="popsicles" class="center" width="600px" height="auto">
     </div>
     <div class="container">
@@ -20,7 +20,148 @@
         <button type="button" class="btn btn-success">Order My Pops Now!</button>
       </div>
 
+      <div class="order-input initially-hidden">
+        <div class="container">
+          <div class="row">
+            <h3>Pop #1:</h3>
+            <div class="size form-group col-md-4">
+              <p>Pop Size:</p>
+              <input type="checkbox" name="size" value="small"> Itty ($2)</br>
+              <input type="checkbox" name="size" value="medium"> Bitty ($3)</br>
+              <input type="checkbox" name="size" value="big"> Biggy ($5)</br>
+              <input type="checkbox" name="size" value="big"> Bomb ($7)</br>
+            </div>
 
+            <div class="flavor form-group col-md-4">
+              <p>Pop Flavor:</p>
+              <input type="checkbox" name="flavor" value="margarita"> Strawberry Margarita</br>
+              <input type="checkbox" name="flavor" value="mojito"> Mango Mojito</br>
+              <input type="checkbox" name="flavor" value="foster"> Bananas Foster</br>
+              <input type="checkbox" name="flavor" value="prosecco"> Prosecco Pop</br>
+              <input type="checkbox" name="flavor" value="daquiri"> Strawberry Daquiri</br>
+              <input type="checkbox" name="flavor" value="russian"> White Russian</br>
+            </div>
+
+            <div class="additions form-group col-md-4">
+              <p>Make it your own: ($1 each):</p>
+              <input type="checkbox" name="addon" value="cream"> Creamsicle-it</br>
+              <input type="checkbox" name="addon" value="boozy"> Extra boozey</br>
+              <input type="checkbox" name="addon" value="coconut"> Coconut flakes</br>
+              <input type="checkbox" name="addon" value="chocolate"> Chocolate dipped</br>
+              <input type="checkbox" name="addon" value="sprinkles"> Sprinkles</br>
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <hr>
+
+      <div class="order-input initially-hidden">
+        <div class="container">
+          <div class="row">
+            <h3>Pop #2:</h3>
+            <div class="size form-group col-md-4">
+              <p>Pop Size:</p>
+              <input type="checkbox" name="size" value="small"> Itty ($2)</br>
+              <input type="checkbox" name="size" value="medium"> Bitty ($3)</br>
+              <input type="checkbox" name="size" value="big"> Biggy ($5)</br>
+              <input type="checkbox" name="size" value="big"> Bomb ($7)</br>
+            </div>
+
+            <div class="flavor form-group col-md-4">
+              <p>Pop Flavor:</p>
+              <input type="checkbox" name="flavor" value="margarita"> Strawberry Margarita</br>
+              <input type="checkbox" name="flavor" value="mojito"> Mango Mojito</br>
+              <input type="checkbox" name="flavor" value="foster"> Bananas Foster</br>
+              <input type="checkbox" name="flavor" value="prosecco"> Prosecco Pop</br>
+              <input type="checkbox" name="flavor" value="daquiri"> Strawberry Daquiri</br>
+              <input type="checkbox" name="flavor" value="russian"> White Russian</br>
+            </div>
+
+            <div class="additions form-group col-md-4">
+              <p>Additions ($1 each):</p>
+              <input type="checkbox" name="addon" value="cream"> Creamsicle-it</br>
+              <input type="checkbox" name="addon" value="boozy"> Extra boozey</br>
+              <input type="checkbox" name="addon" value="coconut"> Coconut flakes</br>
+              <input type="checkbox" name="addon" value="chocolate"> Chocolate dipped</br>
+              <input type="checkbox" name="addon" value="sprinkles"> Sprinkles</br>
+            </div>
+          </div>
+        </div>
+      </div>
+        <hr>
+
+      <div class="order-input initially-hidden">
+        <div class="container">
+          <div class="row">
+            <h3>Pop #3:</h3>
+            <div class="size form-group col-md-4">
+              <p>Pop Size:</p>
+              <input type="checkbox" name="size" value="small"> Itty ($2)</br>
+              <input type="checkbox" name="size" value="medium"> Bitty ($3)</br>
+              <input type="checkbox" name="size" value="big"> Biggy ($5)</br>
+              <input type="checkbox" name="size" value="big"> Bomb ($7)</br>
+            </div>
+
+            <div class="flavor form-group col-md-4">
+              <p>Pop Flavor:</p>
+              <input type="checkbox" name="flavor" value="margarita"> Strawberry Margarita</br>
+              <input type="checkbox" name="flavor" value="mojito"> Mango Mojito</br>
+              <input type="checkbox" name="flavor" value="foster"> Bananas Foster</br>
+              <input type="checkbox" name="flavor" value="prosecco"> Prosecco Pop</br>
+              <input type="checkbox" name="flavor" value="daquiri"> Strawberry Daquiri</br>
+              <input type="checkbox" name="flavor" value="russian"> White Russian</br>
+            </div>
+
+            <div class="additions form-group col-md-4">
+              <p>Additions ($1 each):</p>
+              <input type="checkbox" name="addon" value="cream"> Creamsicle-it</br>
+              <input type="checkbox" name="addon" value="boozy"> Extra boozey</br>
+              <input type="checkbox" name="addon" value="coconut"> Coconut flakes</br>
+              <input type="checkbox" name="addon" value="chocolate"> Chocolate dipped</br>
+              <input type="checkbox" name="addon" value="sprinkles"> Sprinkles</br>
+
+            </div>
+          </div>
+        </div>
+      </div>
+        <hr>
     </div>
+
+      <div class="container center"
+        <div class="order-summary initially-hidden">
+          <div class="pop-list"></div>
+          <h3>Subtotal: <span id="pops-final-order"></span></h3>
+          <div>
+            <button id="checkout-order" class="btn btn-success">Checkout</button>
+          </div>
+        <div class="customer-info initially-hidden">
+          <form>
+            <div class="form-group">
+              <label id="name">Name: </label>
+              <input id="name" type="text">
+            </div>
+            <div class="form-group">
+              <label for="street">Address: </label>
+              <input id="street" type="text">
+            </div>
+            <div class="form-group">
+              <label for="city">City: </label>
+              <input id="city" type="text">
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip Code: </label>
+              <input id="zip" type="text">
+            </div>
+            <div class="form-group">
+              <label for="phone">Telephone: </label>
+              <input id="phone" type="text">
+            </div>
+            <button type="submit" class="btn btn-success">Submit Order!</button>
+          </form>
+        </div>
+      </div>
+      </div>
+
   </body>
 </html>
