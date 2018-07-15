@@ -1,3 +1,7 @@
+.initially-hidden {
+  display: none;
+}
+
 body {
   background-color: #bfe2e8;
 }
@@ -40,24 +44,4 @@ button{
     width: 500px;
     align-items: center;
     font-size: 50px;
-}
-
-#pops-final-order {
-
-}
-
-#checkout-order {
-
-}
-
-#customer-info {
-
-}
-
-#pop-list {
-
-}
-
-#order-summary {
-  
 }
