@@ -1,0 +1,38 @@
+body {
+  background-color: #bfe2e8;
+}
+
+h1 {
+  color: #c12785;
+  font-family: monospace;
+  font-size: 100px;
+  text-align: center;
+}
+
+h2 {
+  color: #f0901f;
+  font-family: monospace;
+  font-size: 50px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #e51c48;
+  text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+button{
+    height: 50px;
+    width: 500px;
+    align-items: center;
+    font-size: 50px;
+}
