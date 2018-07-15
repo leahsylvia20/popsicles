@@ -33,3 +33,27 @@ Pops.prototype.subtotal = function() {
   });
   this.subtotal = subtotal;
 }
+
+// Order Constructor
+function Order(name, street, city, zip, phone) {
+  this.name = name;
+  this.street = street;
+  this.city = city;
+  this.zip = zip;
+  this.phone = phone;
+
+  this.pops = [];
+}
+Order.prototype.addPops = function(pops) {
+  pops.subtotal();
+  this.pops.push(pops);
+}
+Order.prototype.totalCost = function() {
+  var totalCost = 0;
+  this.pops.forEach(function(pops) {
+    totalCost += pops.subtotal;
+  });
+  this.totalCost = totalCost;
+}
+
+// User Interface Logic
