@@ -16,8 +16,8 @@
       <img src=img/pops.jpg alt="popsicles" class="center" width="600px" height="auto">
     </div>
     <div class="container">
-      <div class="order button center">
-        <button type="button" class="btn btn-success">Order My Pops Now!</button>
+      <div class="order initially-hidden center">
+        <button type="button" class="btn btn-success center">Order My Pops Now!</button>
       </div>
 
       <div class="order-input initially-hidden">
@@ -128,14 +128,12 @@
         <hr>
     </div>
 
-      <div class="container center"
-        <div class="order-summary initially-hidden">
-          <div class="pop-list"></div>
-          <h3>Subtotal: <span id="pops-final-order"></span></h3>
-          <div>
-            <button id="checkout-order" class="btn btn-success">Checkout</button>
-          </div>
-        <div class="customer-info initially-hidden">
+    <div class="container center"
+      <div class="order-summary initially-hidden center">
+        <div class="pop-list"></div>
+          <span id="subtotal initially-hidden"></span><h3>Subtotal:</h3>
+            <button id="checkout-order initially-hidden" class="btn btn-success center">Checkout</button>
+        <div class="customer-info initially-hidden center">
           <form>
             <div class="form-group">
               <label id="name">Name: </label>
@@ -157,11 +155,11 @@
               <label for="phone">Telephone: </label>
               <input id="phone" type="text">
             </div>
-            <button type="submit" class="btn btn-success">Submit Order!</button>
+            <button type="submit" class="btn btn-success center">Submit Order!</button>
           </form>
         </div>
       </div>
-      </div>
+    </div>
 
   </body>
 </html>
