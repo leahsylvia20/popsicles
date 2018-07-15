@@ -35,11 +35,9 @@ Pops.prototype.subtotal = function() {
 }
 
 // Order Constructor
-function Order(name, street, city, zip, phone) {
+function Order(name, address, phone) {
   this.name = name;
-  this.street = street;
-  this.city = city;
-  this.zip = zip;
+  this.address = address;
   this.phone = phone;
 
   this.pops = [];
@@ -57,3 +55,22 @@ Order.prototype.totalCost = function() {
 }
 
 // User Interface Logic
+
+  var createOrder = function() {
+    var Name = $('#name').val();
+    var Address = $('#street').val() + ', ' + $('#city').val() + ', ' + $('#zip').val();
+    var Phone = $('#phone').val();
+
+    return Order(name, address, phone);
+  }
+  var createPops = function() {
+    var popsSize = $('input[name="popsSize"]:checked').val();
+    var popsFlavor = $('input[name="popsFlavor"]:checked').val();
+    var Pops = Pops(size, flavor, addon);
+    $('input[name="size"]:checked').each(function() {
+      Pops.addsize($(this).val());
+    });
+    var addon = [];
+    $('input[name="addon"]:checked').each(function() {
+      Pops.addaddon($(this).val());
+    });
