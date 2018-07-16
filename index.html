@@ -9,15 +9,15 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container center">
       <h1>PDX Pops</h1>
-      <h2>Popsicles for grown-ups</h2>
-      <p align="center"> It's hot outside, order a pop and we'll have it to your house lickity split.</p>
-      <img src=img/pops.jpg alt="popsicles" class="center" width="600px" height="auto">
+      <h2>Pops for grown-ups</h2>
+      <p> It's hot outside, order a pop and we'll have it to your house lickity split.</p>
+      <img src=img/pops.jpg alt="popsicles" width="600px" height="auto">
     </div>
     <div class="container">
-      <div class="order initially-hidden center">
-        <button type="button" class="btn btn-success center">Order My Pops Now!</button>
+      <div class="start-order initially-hidden center">
+        <button type="button" class="btn btn-success">Order My Pops Now!</button>
       </div>
 
       <div class="order-input initially-hidden">
@@ -91,7 +91,7 @@
       </div>
         <hr>
 
-      <div class="order initially-hidden">
+      <div class="order-input initially-hidden">
         <div class="container">
           <div class="row">
             <h3>Pop #3:</h3>
@@ -128,11 +128,11 @@
         <hr>
     </div>
 
-    <div class="container center"
-      <div class="order-summary initially-hidden">
+    <div class="container center">
+      <div class="checkout initially-hidden">
         <div class="pop-list"></div>
-          <span id="subtotal initially-hidden center"></span><h3>Subtotal:</h3>
-            <button id="checkout-order initially-hidden" class="btn btn-success center">Checkout</button>
+          <span id="subtotal initially-hidden"></span><h3>Subtotal:</h3>
+            <button id="subtotal initially-hidden" class="btn btn-success">Checkout</button>
         <div class="customer-info initially-hidden">
           <form>
             <div class="form-group">
@@ -155,7 +155,9 @@
               <label for="phone">Telephone: </label>
               <input id="phone" type="text">
             </div>
-            <button type="submit" class="btn btn-success">Submit Order!</button>
+            <div class="order initially-hidden">
+              <button type="submit" class="btn btn-success">Submit Order!</button>
+            </div>
           </form>
         </div>
       </div>
