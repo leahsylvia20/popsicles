@@ -62,84 +62,71 @@ var nextDiv = function(toHide, toShow) {
   $(toHide).hide();
   $(toShow).show();
 
-  var createPops = function() {
-    var popsSize = $('input[name="size"]:checked').val();
-    var popsFlavor = $('input[name="flavor"]:checked').val();
-    var popsAddon = $('input[name="addon"]:checked').val();
-    var newPops = new Pops(popsSize, popsAddon);
+var createPops = function() {
+  var popsSize = $('input[name="size"]:checked').val();
+  var popsFlavor = $('input[name="flavor"]:checked').val();
+  var popsAddon = $('input[name="addon"]:checked').val();
 
-    $('input[name="size"]:checked').each(function() {
-      newPops.size($(this).val());
-    });
-    var popsAddon = [];
-    $('input[name="Addon"]:checked').each(function() {
-      newPops.addAddon($(this).val());
-    });
+  $('input[name="size"]:checked').each(function() {
+    newPops.size($(this).val());
+  });
+  var popsAddon = [];
+  $('input[name="Addon"]:checked').each(function() {
+    newPops.addAddon($(this).val());
+    return new Pops(size, addon);
+  });
 
-    var createCustomerInfo = function() {
-      var Name = $('#name').val();
-      var Address = $('#street').val() + ', ' + $('#city').val() + ', ' + $('#zip').val();
-      var Phone = $('#phone').val();
-      return new Order(name, address, phone);
-    }
-    return newPops;
-    }
 
+  var createCustomerOrder = function() {
+    var Name = $('#name').val();
+    var Address = $('#street').val() + ', ' + $('#city').val() + ', ' + $('#zip').val();
+    var Phone = $('#phone').val();
+    return new Order(name, address, phone);
   }
-  var FinalTotal = function(order) {
-    order.TotalCost();
-    return order.totalCost;
+  return newPops;
   }
 
-    $(document).ready(function() {
-      var Order = new Order();
+}
+var FinalTotal = function(customerOrder) {
+  customerOrder.TotalCost();
+  return customerOrder.totalCost;
+}
 
-      // Order my pops now button
-      $('.start-order button').click(function() {
-        event.preventDefault();
-        Order = createPops();
-        nextDiv('.start-order', '.order-input');
-      });
+  $(document).ready(function() {
+    var customerOrder = new Order();
 
-      // order input submit
-      $('.order-input form').submit(function(event) {
-        event.preventDefault();
-        Order = createPops();
-        nextDiv('.order-input', '.checkout');
-      });
-
-      $('.checkout form').submit(function(event) {
-        event.preventDefault();
-        Order = createFinalTotal();
-        nextDiv('.checkout', '.customer-info');
-      });
-
-      $('.customer-info form').submit(function(event) {
-        event.preventDefault();
-        Order = createCustomerInfo();
-      });
-
-        var thisPops = createPops();
-        Order.addPops(thisPops);
-      });
-
-    // add pops
-    $('.order form').submit(function(event) {
+    // Order my pops now button
+    $('.start-order button').click(function() {
       event.preventDefault();
+      nextDiv('.start-order', '.order-input');
+    });
+
+    // order input submit
+    $('.order-input form').submit(function(event) {
+      event.preventDefault();
+      customerOrder = createPops();
+      nextDiv('.order-input', '.checkout');
+    });
+
+    // order checkout submit
+    $('.checkout form').submit(function(event) {
+      event.preventDefault();
+      Order = createFinalTotal();
+      nextDiv('.checkout', '.customer-info');
+    });
+
+    // customer info submit
+    $('.customer-info form').submit(function(event) {
+      event.preventDefault();
+      customerOrder = createCustomerOrder();
+    });
+
       var thisPops = createPops();
-      Order.addPops(thisPops);
-      nextDiv('.order-pops-input', '.checkout-order');
+      customerOrder.addPops(thisPops);
     });
 
-    // sumbit order
-    $('#checkout-order').click(function(event) {
-      nextDiv('.checkout order', '.order-summary');
-      debugger
-    });
-
-
-    // console log
-    $('#console-log').click(function() {
-      console.log(Order);
-    })
-  }
+  // console log
+  $('#console-log').click(function() {
+    console.log(customerOrder);
+  })
+}
